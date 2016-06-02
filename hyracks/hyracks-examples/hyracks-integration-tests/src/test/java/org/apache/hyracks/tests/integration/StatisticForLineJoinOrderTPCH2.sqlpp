@@ -5,5 +5,5 @@ tpch.coll_count((
 select element {'ordered':c.custkey,'ordered2':o.custkey}
 from (select element  {'custkey': O.o_custkey} from Orders as O) as c,
 (select element  {'custkey': c.c_custkey} from Customer as c) as o
-where (c.orderly=o.orderly)
+where (c.custkey=o.custkey)
 ))};
