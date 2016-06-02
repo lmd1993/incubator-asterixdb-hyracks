@@ -1,0 +1,3 @@
+use tpch;
+{'count':
+tpch.coll_count((select element {'orderly': O.o_orderkey} from Orders as O))};
