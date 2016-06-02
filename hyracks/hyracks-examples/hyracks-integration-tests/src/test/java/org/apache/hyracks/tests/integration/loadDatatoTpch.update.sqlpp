@@ -1,0 +1,8 @@
+use tpch;
+
+
+load  table Orders using localfs (("path"="localhost:///Users/MingdaLi/Desktop/tpch1/orders.tbl"),("format"="delimited-text"),("delimiter"="|"));
+
+load  table Customer using localfs (("path"="localhost:///Users/MingdaLi/Desktop/tpch1/customer.tbl"),("format"="delimited-text"),("delimiter"="|"));
+
+load  table LineItem using localfs (("path"="localhost:///Users/MingdaLi/Desktop/tpch1/lineitem.tbl"),("format"="delimited-text"),("delimiter"="|")) pre-sorted;
