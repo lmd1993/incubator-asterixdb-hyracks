@@ -2,7 +2,7 @@ use tpch;
 {'count':
 tpch.coll_count((
 
-select element {'ordered':c.orderly}
+select element {'ordered':c.orderly,'ordered2':o.orderly}
 from (select element  {'orderly': O.o_orderkey} from Orders as O) as c,
 (select element  {'orderly': l.l_orderkey} from LineItem as l) as o
 where (c.orderly=o.orderly)
